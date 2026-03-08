@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "2026-03-08.minimal-v1",
+  "kind": "Edition",
+  "id": "edition_openclaw_newspaper_ui_session_demo_004",
+  "projectId": "openclaw-newspaper-ui",
+  "projectSlug": "OpenClaw-Newspaper-UI",
+  "slug": "session-demo-004",
+  "fileName": "session-demo-004.html",
+  "title": "会话演示 004",
+  "rawTitle": "session-demo-004",
+  "summary": "快报会话样例 OpenClaw Newspaper Archive 2026-03-07 10:12 快报会话样例 消息已进入 OpenClaw 出站队列，等待宿主投递并产出真实回复。 快报模板验证：轻量输出也能落版 测…",
+  "density": "brief",
+  "densityLabel": "快报 / 小更新",
+  "htmlUrl": "/projects/OpenClaw-Newspaper-UI/session-demo-004.html",
+  "publishedAt": "2026-03-07T17:42:55.655050",
+  "size": 8650,
+  "tags": [],
+  "source": {
+    "importedFrom": "/site/data/portal-index.json",
+    "artifactPath": "projects/OpenClaw-Newspaper-UI/session-demo-004.html",
+    "artifactExists": true
+  }
+}

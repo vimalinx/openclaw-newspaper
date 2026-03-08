@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "2026-03-08.minimal-v1",
+  "kind": "PublishRequest",
+  "id": "publish_request_example_minimal",
+  "project": {
+    "slug": "OpenClaw-Newspaper-UI"
+  },
+  "edition": {
+    "title": "示例版",
+    "summary": "演示后续发布脚本可消费的最小 contract。",
+    "density": "brief",
+    "publishedAt": "2026-03-08T07:38:00+08:00",
+    "tags": [
+      "example",
+      "contract"
+    ]
+  },
+  "content": {
+    "html": "<html><body><article><h1>示例版</h1><p>最小 publish request contract。</p></article></body></html>",
+    "text": "示例版：最小 publish request contract。"
+  },
+  "source": {
+    "sessionId": "agent:main:example",
+    "channel": "feishu",
+    "author": "Staro",
+    "mode": "manual"
+  },
+  "options": {
+    "updateProjectMeta": true,
+    "rebuildPortal": true,
+    "rebuildProjectPage": true
+  }
+}

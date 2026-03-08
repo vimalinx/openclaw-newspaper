@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>快报会话样例</title>
+  <style>
+    :root {
+      --bg: #d9d1c2;
+      --paper: #f4efe4;
+      --ink: #141414;
+      --muted: #666055;
+      --line: rgba(34,31,26,.26);
+      --accent: #7b1512;
+      --sans: "Inter", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+      --serif: "Source Han Serif SC", "Songti SC", "STSong", serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); }
+    body { font-family: var(--serif); }
+    .page { max-width: 1380px; margin: 0 auto; padding: 18px 18px 48px; }
+    .session-head { background: var(--paper); border: 1px solid rgba(0,0,0,.16); box-shadow: 0 12px 34px rgba(0,0,0,.10); padding: 18px 22px; margin-bottom: 16px; }
+    .topline { display: flex; justify-content: space-between; gap: 12px; font: 11px/1.35 var(--sans); text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 6px; }
+    h1 { margin: 0 0 8px; font-size: clamp(34px, 5vw, 62px); line-height: .95; text-transform: uppercase; }
+    .summary { font: 14px/1.55 var(--sans); max-width: 1000px; }
+    .jump { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .jump a, .jump span { color: inherit; text-decoration: none; border: 1px solid rgba(0,0,0,.45); padding: 4px 8px; font: 11px/1.35 var(--sans); background: rgba(255,255,255,.32); }
+    .issue { background: var(--paper); border: 1px solid rgba(0,0,0,.16); box-shadow: 0 12px 30px rgba(0,0,0,.09); margin-bottom: 16px; padding: 16px 20px 20px; position: relative; overflow: hidden; }
+    .issue::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--accent); }
+    .title-row { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; align-items: end; border-bottom: 4px double rgba(0,0,0,.72); padding-bottom: 10px; margin-bottom: 10px; }
+    .kicker { font: 11px/1.3 var(--sans); color: var(--accent); text-transform: uppercase; letter-spacing: .14em; font-weight: 800; margin-bottom: 6px; }
+    h2 { margin: 0; font-size: clamp(26px, 3vw, 44px); line-height: .98; text-transform: uppercase; }
+    .edition { font: 11px/1.35 var(--sans); color: var(--muted); text-transform: uppercase; }
+    .dek { font: 16px/1.5 var(--sans); margin-bottom: 14px; color: #1d1a16; }
+    .content-grid { display: grid; grid-template-columns: minmax(0,2.35fr) minmax(280px,.92fr); gap: 16px; }
+    .article-section { break-inside: avoid; margin-bottom: 16px; }
+    .article-section h3 { margin: 0 0 8px; font: 900 18px/1.2 var(--sans); text-transform: uppercase; letter-spacing: .05em; }
+    .article-section p { margin: 0 0 11px; font-size: 17px; line-height: 1.72; text-align: justify; }
+    .rail-block { border: 1px solid rgba(0,0,0,.62); background: rgba(255,255,255,.30); padding: 10px 12px; margin-bottom: 12px; }
+    .rail-title { font: 800 12px/1.3 var(--sans); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+    .rail-items { margin: 0; padding-left: 18px; font: 13px/1.55 var(--sans); }
+    .rail-items li { margin-bottom: 6px; }
+    .footer { border-top: 3px double rgba(0,0,0,.72); margin-top: 24px; padding-top: 10px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font: 12px/1.5 var(--sans); color: var(--muted); }
+    .empty { background: var(--paper); border: 1px solid rgba(0,0,0,.16); padding: 18px; }
+    @media (max-width: 960px) { .content-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="session-head">
+      <div class="topline">
+        <div>OpenClaw Newspaper Archive</div>
+        <div>2026-03-07 10:12</div>
+      </div>
+      <h1>快报会话样例</h1>
+      <div class="summary">消息已进入 OpenClaw 出站队列，等待宿主投递并产出真实回复。</div>
+      <div class="jump"><a href="#issue-issue-001">快报模板验证：轻量输出也能落版</a><a href="#issue-issue-002">测试网页内交互后是否自动归档到 Documents 并刷新 portal。</a><a href="#issue-issue-003">已排队：等待宿主投递到真实会话</a></div>
+    </section>
+    
+    <article class="issue" id="issue-issue-001">
+      <div class="topline">
+        <div>STARO NEWSPAPER READER</div>
+        <div>2026-03-06 13:41 • 自动生成</div>
+      </div>
+      <div class="title-row">
+        <div>
+          <div class="kicker">BRIEF</div>
+          <h2>快报模板验证：轻量输出也能落版</h2>
+        </div>
+        <div class="edition">Edition 01</div>
+      </div>
+      <div class="dek">今天已经把 demo 推进到了更像产品原型的状态：不只是页面展示，还补上了接入桥、schema 和 adapter。</div>
+      <div class="content-grid">
+        <div class="article-main">
+          <section class="article-section"><h3>快报</h3><p>今天已经把 demo 推进到了更像产品原型的状态：不只是页面展示，还补上了接入桥、schema 和 adapter。</p></section>
+        </div>
+        <aside class="article-rail">
+          <section class="rail-block"><div class="rail-title">摘要</div><ul class="rail-items"><li>reader 现在明确以 session + issue 组织数据</li><li>文档补齐了复用方式与接入路径</li><li>可以把别的 AI 输出快速映射为一版报纸</li><li>下一步优先做 runtime hook</li></ul></section><section class="rail-block"><div class="rail-title">下一步</div><ul class="rail-items"><li>再做默认入口整合</li><li>最后再处理持久化与权限边界</li></ul></section>
+        </aside>
+      </div>
+    </article>
+    
+    <article class="issue" id="issue-issue-002">
+      <div class="topline">
+        <div>STARO NEWSPAPER READER</div>
+        <div>2026-03-07 10:12 • 自动生成</div>
+      </div>
+      <div class="title-row">
+        <div>
+          <div class="kicker">BRIEF</div>
+          <h2>测试网页内交互后是否自动归档到 Documents 并刷新 portal。</h2>
+        </div>
+        <div class="edition">Edition 02</div>
+      </div>
+      <div class="dek">测试网页内交互后是否自动归档到 Documents 并刷新 portal。</div>
+      <div class="content-grid">
+        <div class="article-main">
+          <section class="article-section"><h3>用户输入</h3><p>测试网页内交互后是否自动归档到 Documents 并刷新 portal。</p></section>
+        </div>
+        <aside class="article-rail">
+          <section class="rail-block"><div class="rail-title">摘要</div><ul class="rail-items"><li>已从底部 Composer 提交</li><li>已进入真实 OpenClaw 出站队列</li><li>宿主侧可读取 runtime/bridge_outbox.json 并转发到当前主会话</li></ul></section><section class="rail-block"><div class="rail-title">下一步</div><ul class="rail-items"><li>按 brief 模式补充更多行动项或验证点</li></ul></section>
+        </aside>
+      </div>
+    </article>
+    
+    <article class="issue" id="issue-issue-003">
+      <div class="topline">
+        <div>STARO NEWSPAPER READER</div>
+        <div>2026-03-07 10:12 • 自动生成</div>
+      </div>
+      <div class="title-row">
+        <div>
+          <div class="kicker">REPORT</div>
+          <h2>已排队：等待宿主投递到真实会话</h2>
+        </div>
+        <div class="edition">Edition 03</div>
+      </div>
+      <div class="dek">消息已进入 OpenClaw 出站队列，等待宿主投递并产出真实回复。</div>
+      <div class="content-grid">
+        <div class="article-main">
+          <section class="article-section"><h3>OpenClaw 出站队列回执</h3><p>消息已进入 `runtime/bridge_outbox.json`，等待宿主侧投递到真实 OpenClaw 主会话。</p></section>
+        </div>
+        <aside class="article-rail">
+          <section class="rail-block"><div class="rail-title">进度要点</div><ul class="rail-items"><li>composer -&gt; /bridge/send</li><li>append_prebuilt_issue(user)</li><li>append runtime/bridge_outbox.json</li><li>host / watcher 消费队列并转发到主会话</li></ul></section><section class="rail-block"><div class="rail-title">阻塞与动作</div><ul class="rail-items"><li>真实 assistant 回复写入 main session jsonl</li><li>watch_openclaw_session.py 自动 ingest 下一版 issue</li></ul></section>
+        </aside>
+      </div>
+    </article>
+    
+    <footer class="footer">
+      <div>Auto archived from demos/newspaper-system</div>
+      <div>Session: session-demo-004</div>
+    </footer>
+  </main>
+</body>
+</html>
