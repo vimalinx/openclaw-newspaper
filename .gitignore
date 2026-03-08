@@ -1,0 +1,20 @@
+# Bytecode / caches
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+
+# Local runtime artifacts
+data/requests/*.json
+data/receipts/*.json
+!data/requests/.gitkeep
+!data/receipts/.gitkeep
+
+# Optional local mirrors / generated extras
+site/archive
+site/general
+site/projects
+site/workspace-reports
